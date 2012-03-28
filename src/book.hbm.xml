@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="ru.leti.alexeeva.shared.Book" table="BOOK">
+    <id name="id" type="long" column="ID" >
+        <generator class="increment"/>
+    </id>
+
+    <property name="author">
+        <column name="author" />
+    </property>
+
+    <property name="name">
+        <column name="name" />
+    </property>
+
+    <property name="publisher">
+        <column name="publisher" />
+    </property>
+
+    <property name="year">
+        <column name="year" />
+    </property>
+
+    <property name="price">
+        <column name="price" />
+     </property>
+
+    <property name="quantity">
+        <column name="quantity" />
+    </property>
+
+    <property name="timeOfArrival">
+        <column name="time_of_arrival" />
+    </property>
+
+    <property name="keywords">
+      <column name="keywords" />
+    </property>
+
+  </class>
+</hibernate-mapping>

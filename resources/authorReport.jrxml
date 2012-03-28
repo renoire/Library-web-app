@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE jasperReport
+        PUBLIC "-//JasperReports//DTD Report Design//EN"
+        "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport name="simple">
+
+    <style
+            name="Normal"
+            isDefault="true"
+            pdfFontName="Times-Roman"
+            pdfEncoding="UTF-8"
+            />
+
+    <parameter name="name" class="java.lang.String"/>
+
+    <detail>
+        <band height="40">
+            <staticText>
+                <reportElement x="0" y="0" width="250" height="20" />
+                <text><![CDATA[your name is: ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="50" y="20" width="50" height="20" />
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[$P{name}]]>
+                </textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>
